@@ -22,13 +22,16 @@ block content
                }
       br
       br
+
       // send info to QandA.js
       form(action='/QandA')
          h4= 'Choose Location:'
          select(name='option')
-            option(value='') Berlin
-            option(value='c') Tel Aviv
-            option(value='q') Quota Managment
+            option(value='Lesvos') Lesvos,Greece
+            option(value='Chios') Chios,Greece
+            option(value='Oberhausen') Oberhausen,Germany
+            option(value='Köln') Köln,Germany
+            option(value='Kos') Kos,Greece
          br
          button.btn(type='submit') Get Q&A
 
