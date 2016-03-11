@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js')
+    script.
+      $(document).ready(function() {
+        $("#datepicker").datepicker({dateFormat: "yymmdd"});
+      });
+
+  body
+    div.navbar.navbar-inverse.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          button.btn.btn-navbar(type='button', data-toggle='collapse', data-   target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          div.nav-collapse.collapse
+    div.container(align='center')
+      br
+      br
+      block content
+    script(type='text/javascript' src='/js/bootstrap.min.js')

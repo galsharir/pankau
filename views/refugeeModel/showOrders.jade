@@ -1,0 +1,25 @@
+extends ../layout
+block content
+   h1= 'Orders'
+   br
+   div
+      legend Total Farmers Offering For This Week
+      table#ordersTable(width='350px', border='4')
+         thead
+            tr#headtag
+               th Phone
+               th Status
+               th Order Date
+               th Order ID
+               th Center
+         tbody
+            each order in data
+               tr(align='center')
+                  td= order.Phone.S
+                  td= order.Status.S.toLowerCase()
+                  td= order.deliveryDate.S
+                  td= order.orderID.S
+                  td= order.Center.S
+
+         br
+         br

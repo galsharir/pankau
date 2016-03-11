@@ -1,0 +1,48 @@
+//This is a main navigation of the project
+   Created by Master K on 14/08/2015.
+
+extends layout
+title = 'Refugee Helper'
+block content
+   h1= 'Refugee 101'
+   br
+   br
+   div.container
+      p Can you please share your location with us?
+      p
+         button.btn(onclick = "shareLocation()") Yes
+            script.
+               function shareLocation() {
+                  window.location.href = '/QandA'
+               }
+         button.btn(onclick = "doesNotWantToShareLocation()")  No
+            script.
+               function doesNotWantToShareLocation() {
+                  // TODO: add a pop up saying why we ned the location
+               }
+      br
+      br
+      // send info to QandA.js
+      form(action='/QandA')
+         h4= 'Choose Location:'
+         select(name='option')
+            option(value='') Berlin
+            option(value='c') Tel Aviv
+            option(value='q') Quota Managment
+         br
+         button.btn(type='submit') Get Q&A
+
+      // send info to QandA.js
+      form#searchBox(action='/QandA')
+         br
+         h4= 'Choose Location:'
+         input(type='text', name='query')
+         br
+         button.btn(type='submit') Get Q&A
+      br
+
+
+   br
+
+
+

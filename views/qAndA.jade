@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= "Top 10 Q&A in your area"
+  if qResult == '[object Object]'
+    table
+      tr
+        td
+          center
+            b Question
+        td
+          center
+            b Answer
+        td
+          center
+            b Rank
+      each qaPair in qResult.Items
+        tr
+          td
+            center= qaPair.question +'   '
+          td
+            center= qaPair.answer +'   '
+          td
+            center= qaPair.rank
+
+
