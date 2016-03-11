@@ -22,25 +22,18 @@ block content
                }
       br
       br
+
       // send info to QandA.js
       form(action='/QandA')
          h4= 'Choose Location:'
          select(name='option')
-            option(value='') Berlin
-            option(value='c') Tel Aviv
-            option(value='q') Quota Managment
+            option(value='Lesvos') Lesvos, Greece
+            option(value='Chios') Chios, Greece
+            option(value='Oberhausen') Oberhausen, Germany
+            option(value='Koln') Köln, Germany
+            option(value='Kos') Kos, Greece
          br
          button.btn(type='submit') Get Q&A
-
-      // send info to QandA.js
-      form#searchBox(action='/QandA')
-         br
-         h4= 'Choose Location:'
-         input(type='text', name='query')
-         br
-         button.btn(type='submit') Get Q&A
-      br
-
 
    br
 

@@ -7,6 +7,9 @@ block content
       tr
         td
           center
+            b Category
+        td
+          center
             b Question
         td
           center
@@ -14,13 +17,15 @@ block content
         td
           center
             b Rank
-      each qaPair in qResult.Items
+      each qaRegistry in qResult.Items
         tr
           td
-            center= qaPair.question +'   '
+            center= qaRegistry.subject +'   '
           td
-            center= qaPair.answer +'   '
+            center= qaRegistry.question +'   '
           td
-            center= qaPair.rank
+            center= qaRegistry.answer +'   '
+          td
+            center= qaRegistry.score
 
 
