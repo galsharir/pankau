@@ -4,7 +4,9 @@
 
 
 // TODO: update this to get the data from our sqlite
-function getQandA(callback){
+function getQandA(location, callback){
+
+    // ToDo:  Get the top 10 q and A for this location
     console.log("In get quota");
     var params = { //Params to be sent according to the structure of the table (In PDF file).
         "TableName": "farmersQuota"
