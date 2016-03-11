@@ -1,6 +1,21 @@
 /**
  * Created by galsharir on 11/03/16.
  */
+
+
+
+if(window.openDatabase){
+  var shortName   =  'myTable';
+  var version   =  '1.0';
+  var displayName  =  'Edentiti Information';
+  var maxSize   =  65536; // in bytes
+  var db =  openDatabase(shortName, version, displayName, maxSize);
+  alert('Sqlite Database created');
+}
+
+db.createFromJSON(jsonString,'myTable');
+
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
